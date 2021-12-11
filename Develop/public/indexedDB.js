@@ -2,10 +2,10 @@ let db;
 
 const indexedDB =
     window.indexedDB ||
-    window.mozindexedDB ||
-    window.webkitindexedDB ||
-    window.msindexedDB ||
-    window.shimindexedDB;
+    window.mozIndexedDB ||
+    window.webkitIndexedDB ||
+    window.msIndexedDB ||
+    window.shimIndexedDB;
 
 const request = indexedDB.open("budget", 1);
 
