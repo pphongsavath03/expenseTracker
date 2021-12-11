@@ -1,12 +1,13 @@
 # Progressive Budget
 
+Heroku Delpoy: https://immense-fortress-51967.herokuapp.com/
+
+Github Repo:  https://github.com/pphongsavath03/expenseTracker
+
 # Description
 
 This application will allow the user to keep track of their budget.  The user will be able to describe their transaction and select an option to increase or decrease their current budget.  The user will also have access to the application by downloading via progressive web app. 
 
-Heroku Delpoy: https://immense-fortress-51967.herokuapp.com/
-
-Github Repo:  https://github.com/pphongsavath03/expenseTracker
 
 ![homescreen](https://user-images.githubusercontent.com/87045456/145664014-c55ca29f-92b4-4342-8acf-e8791fecf49d.jpg)
 
