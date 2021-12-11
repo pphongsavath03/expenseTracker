@@ -1,13 +1,13 @@
 let db;
 
-const indexDB =
-    window.indexDB ||
-    window.mozIndexDB ||
-    window.webkitIndexDB ||
-    window.msIndexDB ||
-    window.shimIndexDB;
+const indexedDB =
+    window.indexedDB ||
+    window.mozindexedDB ||
+    window.webkitindexedDB ||
+    window.msindexedDB ||
+    window.shimindexedDB;
 
-const request = indexDB.open("budget", 1);
+const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = function (event) {
     const db = event.target.result;
@@ -27,16 +27,16 @@ request.onerror = function (event) {
 };
 
 function saveRecord(record) {
-    console.log("in indexDB.js / saveRecord ---------------------" + record);
+    console.log("in indexedDB.js / saveRecord ---------------------" + record);
     const transaction = db.transaction(["pending"], "readwrite");
-    console.log("in indexDB.js / saveRecord / transaction ----------------" + transaction);
+    console.log("in indexedDB.js / saveRecord / transaction ----------------" + transaction);
     const store = transaction.objectStore("pending");
     store.add(record);
 }
 
 function checkDatabase() {
     const transaction = db.transaction(["pending"], "readwrite");
-    console.log("in indexDB.js / checkDatabase / transaction ----------------" + transaction);
+    console.log("in indexedDB.js / checkDatabase / transaction ----------------" + transaction);
     const store = transaction.objectStore("pending");
     const getAll = store.getAll();
 
